@@ -177,7 +177,7 @@ if (!function_exists('newses_single_main_content')) :
             <article class="small single p-3">
                 <?php the_content();
                 newses_edit_link();
-                newses_social_share_post($post);
+                newses_social_share_post();
                 wp_link_pages(array(
                     'before' => '<div class="single-nav-links">',
                     'after' => '</div>',

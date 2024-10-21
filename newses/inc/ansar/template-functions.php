@@ -299,7 +299,7 @@ if (!function_exists('newses_site_info_style')) :
     }
 endif;
 
-function newses_social_share_post($post) {
+function newses_social_share_post() {
 
         $single_show_share_icon = esc_attr(get_theme_mod('single_show_share_icon','true'));
         if($single_show_share_icon == true) {
