@@ -453,7 +453,7 @@ if ( ! function_exists( 'newses_header_social_icon' ) ) :
         if($newses_header_insta_link !=''){ ?>
             <li>
                 <a <?php if($newses_insta_insta_target) { ?>target="_blank" <?php } ?> href="<?php echo esc_url($newses_header_insta_link); ?>">
-                    <span class="icon-soci instagram"><i class="fa-brands fa-youtube"></i></span>
+                    <span class="icon-soci instagram"><i class="fa-brands fa-instagram"></i></span>
                 </a>
             </li>
         <?php }
