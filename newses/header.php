@@ -87,9 +87,9 @@ else
                       <?php wp_nav_menu( array(
                         'theme_location' => 'primary',
                         'container'  => 'nav-collapse collapse navbar-inverse-collapse',
-                        'menu_class' => 'nav navbar-nav mr-auto',
+                        'menu_class' => 'nav navbar-nav mr-auto'.(is_rtl() ? ' sm-rtl' : ''),
                         'fallback_cb' => 'newses_fallback_page_menu',
-                        'walker' => new newses_nav_walker()
+                        'walker' => new newses_nav_walker(),
                       ) ); 
                       ?>
                     </div>   

@@ -50,14 +50,12 @@ if (!class_exists('Newses_Latest_Post')) :
             // open the widget container
             echo $args['before_widget'];
             ?>
-            <?php if (!empty($title) || !empty($subtitle)): ?>
              <!-- mg-posts-sec mg-posts-modul-6 -->
-            <div class="mg-posts-sec mg-posts-modul-6  wd-back">
+            <div class="mg-posts-sec mg-posts-modul-6 latest-posts-widget<?php echo (!empty($title)) ? ' wd-back' : ''?>">
+                <?php if (!empty($title)): ?>
                 <!-- mg-sec-title -->
                 <div class="mg-sec-title st3">
-                <?php if (!empty($title)): ?>
                     <h4><span class="bg"><?php echo esc_html($title); ?></span></h4>
-                <?php endif; ?>
                 </div>
                 <!-- // mg-sec-title -->
                 <?php endif; ?>

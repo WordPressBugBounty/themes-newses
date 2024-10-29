@@ -4,7 +4,7 @@ Theme URI: https://themeansar.com/free-themes/newses/
 Author: Themeansar
 Author URI: https://themeansar.com
 Description: Newses is an indispensable Responsive News and Magazine template with a clean, modern design suitable for everyone who wants to share their stories and the latest breaking news or the hottest products. the theme comes light and dark color mode, Newses is suitable for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals, personal blogs, newspaper, agencies, publishing or review siteand any creative website. Newses is SEO friendly, WPML, Gutenberg, WooCommerce, translation and RTL ready. We offer great support and friendly help!. Live preview : https://demos.themeansar.com/newses and documentation at https://docs.themeansar.com/docs/newses/
-Version: 2.0.0.38
+Version: 2.0.0.39
 Tested up to: 6.6
 Requires PHP: 7.0
 Requires at least: 5.4
@@ -1859,7 +1859,6 @@ ol.wp-block-latest-comments {
 	text-align: right;
 	text-transform: uppercase;
 }
-
 .mg-sidebar .mg-widget.widget_tag_cloud, .mg-widget.widget_tag_cloud {
 	padding:  10px 20px;
 }
@@ -1913,18 +1912,15 @@ ol.wp-block-latest-comments {
 .wp-block-search__input {
     border: 2px solid ;
 }
-
 .wp-block-button .wp-block-button__link {
     background: #32373c;
     border: 2px solid #32373c;
 }
-
 .wp-block-button.is-style-outline .wp-block-button__link:hover, .wp-block-button.is-style-outline .wp-block-button__link:focus {
     background: #32373c;
     border: 2px solid #32373c;
     color: #fff;
 }
-
 .wp-block-button .wp-block-button__link:hover, .wp-block-button .wp-block-button__link:focus {
     background: transparent;
     border: 2px solid #32373c;
@@ -1972,6 +1968,17 @@ ol.wp-block-latest-comments {
 	right: 0;
 	content: "";
 	background: rgba(0,0,0,0.3);
+}
+.mg-widget .latest-posts-widget .col-md-6 {
+	max-width: inherit;
+    flex: auto;
+}
+.mg-widget .latest-posts-widget .mg-posts-sec-post {
+	flex-direction: column;
+	gap: 10px;
+}
+.mg-widget .latest-posts-widget.wd-back .mg-sec-top-post{
+	padding: 0 25px;
 }
 /* --------------------------------------
 =========================================

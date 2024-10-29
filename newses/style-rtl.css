@@ -4,7 +4,7 @@ Theme URI: https://themeansar.com/free-themes/newses/
 Author: Themeansar
 Author URI: https://themeansar.com
 Description: Newses is an indispensable Responsive News and Magazine template with a clean, modern design suitable for everyone who wants to share their stories and the latest breaking news or the hottest products. the theme comes light and dark color mode, Newses is suitable for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals, personal blogs, newspaper, agencies, publishing or review siteand any creative website. Newses is SEO friendly, WPML, Gutenberg, WooCommerce, translation and RTL ready. We offer great support and friendly help!. Live preview : https://demos.themeansar.com/newses and documentation at https://docs.themeansar.com/docs/newses/
-Version: 2.0.0.38
+Version: 2.0.0.39
 Tested up to: 6.6
 Requires PHP: 7.0
 Requires at least: 5.4
@@ -506,7 +506,7 @@ select {
 	white-space: nowrap;
 	width: 100%;
 }
- .no-gutter > [class*=col-] {
+.no-gutter > [class*=col-] {
  padding-right: 0;
  padding-left: 0;
 }
@@ -1588,7 +1588,6 @@ button.mfp-close:hover, button.mfp-close:focus {
 .mg-posts-modul-1 .mg-blog-post-3 .mg-blog-img.smminh img{
 	min-height: 160px;
 }
-
 .mg-posts-modul-4 .small-post.mg-post-1 .img-small-post, .mg-posts-modul-4 .small-post.mg-post-1 img {
     height: auto;
     width: 100%;
@@ -2070,6 +2069,17 @@ ol.wp-block-latest-comments {
 	text-align: right;
 	text-transform: uppercase;
 }
+.mg-widget .latest-posts-widget .col-md-6 {
+	max-width: inherit;
+    flex: auto;
+}
+.mg-widget .latest-posts-widget .mg-posts-sec-post {
+	flex-direction: column;
+	gap: 10px;
+}
+.mg-widget .latest-posts-widget.wd-back .mg-sec-top-post{
+	padding: 0 25px;
+}
 /*--calendar_wrap end--*/ 
 /*----woocommerce footer-widget----*/
 .mg-sidebar .mg-widget.widget_product_search .btn {
@@ -2362,20 +2372,17 @@ footer .site-title-footer {
 	font-size: 14px;
 	padding: 0;
 }
-/*** WordPress ****/
 
 /*** WordPress ****/
 .bypostauthor {}
 .wp-caption {
   margin-bottom: calc(1.5 * 1rem);
 }
-
 .wp-caption img[class*="wp-image-"] {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-
 .wp-caption-text {
   font-size: 13px;
   font-style: italic;
@@ -2562,8 +2569,7 @@ address i {
 	background: #fff;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.15);
 }
-.woocommerce ul.products li.product:hover {
-	
+.woocommerce ul.products li.product:hover {	
 }
 .woocommerce ul.products li.product a img:hover {
 	opacity: 0.6;
@@ -3111,7 +3117,6 @@ footer .mg-widget .woocommerce ul.cart_list li img, footer .mg-widget .woocommer
 .navigation.pagination > li:first-child > a, .navigation.pagination > li:first-child > span {
     border-radius: 30px;
 }
-
 .wp-block-search .wp-block-search__button {
     padding: 5px 35px;
     line-height: 30px;
@@ -3124,7 +3129,6 @@ footer .mg-widget .woocommerce ul.cart_list li img, footer .mg-widget .woocommer
     transition: all 0.4s ease-in-out 0s;
     box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 20%), 0 1px 5px 0 rgb(0 0 0 / 12%);
 }
-
 /* =========================================
 	block Header
 =========================================
@@ -3162,7 +3166,6 @@ footer .mg-widget .woocommerce ul.cart_list li img, footer .mg-widget .woocommer
 .wp-block-search__input {
     border: 2px solid ;
 }
-
 /* --------------------------------------
 =========================================
 	9.mg-Responsive part
