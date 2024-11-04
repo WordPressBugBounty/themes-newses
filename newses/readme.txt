@@ -3,9 +3,9 @@ Contributors: Themeansar
 Author: Themeansar
 Requires at least: WordPress 5.4
 Tested up to: WordPress 6.6
-Requires PHP: 7.0
-Stable tag: 2.0.0.39
-Version: 2.0.0.39
+Requires PHP: 7.4
+Stable tag: 2.0.0.40
+Version: 2.0.0.40
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns ,right-sidebar, flexible-header, custom-background, custom-header, custom-menu, editor-style, featured-images, footer-widgets,  theme-options, threaded-comments, rtl-language-support, translation-ready, full-width-template, custom-logo, blog, news
@@ -586,3 +586,6 @@ Added Selective Refresh to Pages Layout.
 = Version 2.0.0.39
 * Fixed Latest Posts Widget on Sidebar.
 * Fixed Menus Dropdown Direction on RTL
+
+= Version 2.0.0.40
+* Added Animation on Tabbed Posts Widget.

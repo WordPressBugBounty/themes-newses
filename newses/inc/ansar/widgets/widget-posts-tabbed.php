@@ -88,18 +88,18 @@ if (!class_exists('Newses_Tab_Posts')) :
                     </ul>
                 </div>
                 <div class="tab-content">
-                    <div id="<?php echo esc_attr($tab_id); ?>-recent" role="tabpanel" class="tab-pane active">
+                    <div id="<?php echo esc_attr($tab_id); ?>-recent" role="tabpanel" class="tab-pane fade active show">
                         <?php
                         newses_render_posts('recent', $show_excerpt, $excerpt_length, $number_of_posts);
                         ?>
                     </div>
-                    <div id="<?php echo esc_attr($tab_id); ?>-popular" role="tabpanel" class="tab-pane">
+                    <div id="<?php echo esc_attr($tab_id); ?>-popular" role="tabpanel" class="tab-pane fade">
                         <?php
                         newses_render_posts('popular', $show_excerpt, $excerpt_length, $number_of_posts);
                         ?>
                     </div>
                     <?php if ($enable_categorised_tab == 'true'): ?>
-                        <div id="<?php echo esc_attr($tab_id); ?>-categorised" role="tabpanel" class="tab-pane">
+                        <div id="<?php echo esc_attr($tab_id); ?>-categorised" role="tabpanel" class="tab-pane fade">
                             <?php
                             newses_render_posts('categorised', $show_excerpt, $excerpt_length, $number_of_posts, $category);
                             ?>
