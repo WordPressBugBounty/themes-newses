@@ -547,7 +547,6 @@ $wp_customize->add_control(
         array(
             'label' => esc_html__('Single Blog Pages', 'newses'),
             'section' => 'site_layout_settings',
-
         )
     )
 );
@@ -555,7 +554,8 @@ $wp_customize->add_control(
 $wp_customize->add_setting(
     'newses_single_page_layout', array(
     'default'           => 'single-align-content-right',
-    'sanitize_callback' => 'newses_sanitize_radio'
+    'sanitize_callback' => 'newses_sanitize_radio',
+    'transport' => 'postMessage',
 ) );
 $wp_customize->add_control(
     new Newses_Radio_Image_Control( 

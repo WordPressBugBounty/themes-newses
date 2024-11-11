@@ -295,6 +295,10 @@ function newses_customize_register($wp_customize) {
 			'selector'        => '.page-class > .container > .row',
 			'render_callback' => 'newses_customize_partial_page_layout',
 		));
+		$wp_customize->selective_refresh->add_partial('newses_single_page_layout', array(
+			'selector'        => '.single-class .single-main-content.row',
+			'render_callback' => 'newses_customize_partial_single_layout',
+		));
 	}
 
     $default = newses_get_default_theme_options();
@@ -388,6 +392,9 @@ function newses_customize_partial_page_layout() {
 	return get_template_part('template-parts/content', 'page');
 }
 
+function newses_customize_partial_single_layout() {
+	return get_template_part('template-parts/content', 'single');
+}
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
