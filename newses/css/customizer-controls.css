@@ -100,3 +100,13 @@ a.button.button-blue-secondary.button_info{
 .newses-notice_text .panel-column-6 .panel-column-two {
     margin-top: 30px;
 }
+#customize-controls .control-section > h3.accordion-section-title {
+    display: flex;
+}
+#customize-controls li#accordion-section-newses .accordion-section-title{ 
+    justify-content: space-between;
+    align-items: center;
+}
+#customize-controls li#accordion-section-newses .accordion-section-title::after{
+    content: ''; 
+}
