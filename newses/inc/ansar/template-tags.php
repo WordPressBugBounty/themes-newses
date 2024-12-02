@@ -87,8 +87,7 @@ endif;
 if ( ! function_exists( 'newses_post_comment' ) ) :
     function newses_post_comment() { ?>
         <span class="comments-link"><i class="fa-regular fa-comments"></i>
-            <a href="<?php the_permalink(); ?>">
-                <?php
+            <a href="<?php the_permalink(); ?>"><?php
                 if ( get_comments_number() == 0 ) {
                     esc_html_e(  __('No Comments', 'newses') );
                 } else {

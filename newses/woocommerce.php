@@ -6,10 +6,10 @@
  */
 get_header(); ?>
 <!--==================== ti breadcrumb section ====================-->
-<?php get_template_part('index','banner'); ?>
+<?php if ( function_exists( 'is_product' ) && !is_product() ) { get_template_part('index','banner'); }  ?>
 
 <!-- #main -->
-<main id="content">
+<main id="content" class="woo-class">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
