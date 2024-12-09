@@ -3,15 +3,13 @@ if (!class_exists('Newses_Posts_List')) :
     /**
      * Adds Newses_Posts_List widget.
      */
-    class Newses_Posts_List extends Newses_Widget_Base
-    {
+    class Newses_Posts_List extends Newses_Widget_Base {
         /**
          * Sets up a new widget instance.
          *
          * @since 1.0.0
          */
-        function __construct()
-        {
+        function __construct() {
             $this->text_fields = array('newses-categorised-posts-title', 'newses-excerpt-length', 'newses-posts-number');
             $this->select_fields = array('newses-select-category', 'newses-show-excerpt');
 
@@ -33,75 +31,66 @@ if (!class_exists('Newses_Posts_List')) :
          * @param array $instance Saved values from database.
          */
 
-        public function widget($args, $instance)
-        {
+        public function widget($args, $instance) {
 
             $instance = parent::newses_sanitize_data($instance, $instance);
-
 
             /** This filter is documented in wp-includes/default-widgets.php */
             $title = apply_filters('widget_title', $instance['newses-categorised-posts-title'], $instance, $this->id_base);
             $category = isset($instance['newses-select-category']) ? $instance['newses-select-category'] : '0';
             $number_of_posts = isset($instance['newses-posts-number']) ? $instance['newses-posts-number'] : 10;
 
-
             // open the widget container
             echo $args['before_widget'];
             ?>
-        <div class="mg-posts-sec mg-posts-modul-2 posts-list-widget wd-back">
-            <?php if (!empty($title)): ?>
-                <?php if (!empty($title)): ?> 
-                <div class="mg-sec-title st3">
-                <!-- mg-sec-title -->
-                <h4><span class="bg"><?php echo esc_html($title); ?></span></h4>
-                </div>
+            <div class="mg-posts-sec mg-posts-modul-2 posts-list-widget wd-back">
+                <?php if (!empty($title)): ?>
+                    <?php if (!empty($title)): ?> 
+                    <div class="mg-sec-title st3">
+                    <!-- mg-sec-title -->
+                    <h4><span class="bg"><?php echo esc_html($title); ?></span></h4>
+                    </div>
+                    <?php endif; ?>
                 <?php endif; ?>
-            <?php endif; ?>
-            <?php
-            $all_posts = newses_get_posts($number_of_posts, $category);
-            ?>
-            <!-- mg-posts-sec-inner -->
-            <div class="mg-posts-sec-inner">
-                <div class="small-list-post row">
-                    <?php
-                    $count = 1;
-                    if ($all_posts->have_posts()) :
-                        while ($all_posts->have_posts()) : $all_posts->the_post();
-                            global $post;
-                            $url = newses_get_freatured_image_url($post->ID, 'thumbnail');
+                <?php
+                $all_posts = newses_get_posts($number_of_posts, $category);
+                ?>
+                <!-- mg-posts-sec-inner -->
+                <div class="mg-posts-sec-inner">
+                    <div class="small-list-post row">
+                        <?php
+                        $count = 1;
+                        if ($all_posts->have_posts()) :
+                            while ($all_posts->have_posts()) : $all_posts->the_post();
+                                global $post;
+                                $url = newses_get_freatured_image_url($post->ID, 'thumbnail');
 
-                            ?>
-                            <!-- small-list-post -->
-                            
-                                
-                                    <div class="small-post media col-md-6">
-                                        <!-- small_post -->
-                                        <div class="img-small-post back-img" style="background-image: url('<?php echo esc_url($url); ?>');">
-                                            <a href="<?php the_permalink(); ?>" class="link-div"></a>
-                                        </div>
-                                        <!-- // img-small-post -->
-                                        <div class="small-post-content media-body">
-                                        <?php newses_post_categories(); ?>
-                                            <!-- small-post-content -->
-                                            <h5 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-                                            <!-- // title_small_post -->
-                                        </div>
-                                        <!-- // small-post-content -->
+                                ?>
+                                <!-- small-list-post -->
+                                <div class="small-post media col-md-6">
+                                    <!-- small_post -->
+                                    <div class="img-small-post back-img" style="background-image: url('<?php echo esc_url($url); ?>');">
+                                        <a href="<?php the_permalink(); ?>" class="link-div"></a>
                                     </div>
-                                    <!-- // small_post -->
-                                
-                            
-
-                            <?php
-                            $count++;
-                        endwhile;
-                    endif;
-                    wp_reset_postdata();
-                    ?>
-                </div>    
+                                    <!-- // img-small-post -->
+                                    <div class="small-post-content media-body">
+                                    <?php newses_post_categories(); ?>
+                                        <!-- small-post-content -->
+                                        <h5 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+                                        <!-- // title_small_post -->
+                                    </div>
+                                    <!-- // small-post-content -->
+                                </div>
+                                <!-- // small_post -->
+                                <?php
+                                $count++;
+                            endwhile;
+                        endif;
+                        wp_reset_postdata();
+                        ?>
+                    </div>    
+                </div>
             </div>
-        </div>
-
             <?php
             // close the widget container
             echo $args['after_widget'];
@@ -114,8 +103,7 @@ if (!class_exists('Newses_Posts_List')) :
          *
          * @param array $instance Previously saved values from database.
          */
-        public function form($instance)
-        {
+        public function form($instance) {
             $this->form_instance = $instance;
             $options = array(
                 'true' => __('Yes', 'newses'),
@@ -131,11 +119,6 @@ if (!class_exists('Newses_Posts_List')) :
                 echo parent::newses_generate_select_options('newses-select-category', __('Select category', 'newses'), $categories);
 
             }
-
-            //print_pre($terms);
-
-
         }
-
     }
 endif;
