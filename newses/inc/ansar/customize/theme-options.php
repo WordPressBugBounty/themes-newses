@@ -704,6 +704,7 @@ $wp_customize->add_setting('newses_single_post_category',
     array(
         'default' => true,
         'sanitize_callback' => 'newses_sanitize_checkbox',
+        'transport' => $selective_refresh,
     )
 );
 $wp_customize->add_control(new Newses_Toggle_Control( $wp_customize, 'newses_single_post_category', 
@@ -718,6 +719,7 @@ $wp_customize->add_setting('newses_single_post_admin_details',
     array(
         'default' => true,
         'sanitize_callback' => 'newses_sanitize_checkbox',
+        'transport' => $selective_refresh,
     )
 );
 $wp_customize->add_control(new Newses_Toggle_Control( $wp_customize, 'newses_single_post_admin_details', 
@@ -732,6 +734,7 @@ $wp_customize->add_setting('newses_single_post_date',
     array(
         'default' => true,
         'sanitize_callback' => 'newses_sanitize_checkbox',
+        'transport' => $selective_refresh,
     )
 );
 $wp_customize->add_control(new Newses_Toggle_Control( $wp_customize, 'newses_single_post_date', 
@@ -745,6 +748,7 @@ $wp_customize->add_setting('newses_single_post_tag',
     array(
         'default' => true,
         'sanitize_callback' => 'newses_sanitize_checkbox',
+        'transport' => $selective_refresh,
     )
 );
 $wp_customize->add_control(new Newses_Toggle_Control( $wp_customize, 'newses_single_post_tag', 
