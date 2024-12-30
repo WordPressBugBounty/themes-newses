@@ -764,6 +764,7 @@ array(
     'default' => $newses_default['single_show_featured_image'],
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'newses_sanitize_checkbox',
+    'transport' => $selective_refresh,
 )
 );
 $wp_customize->add_control(new Newses_Toggle_Control( $wp_customize, 'single_show_featured_image', 
@@ -778,6 +779,7 @@ $wp_customize->add_setting('single_show_share_icon',
         'default' => $newses_default['single_show_share_icon'],
         'capability' => 'edit_theme_options',
         'sanitize_callback' => 'newses_sanitize_checkbox',
+        'transport' => $selective_refresh,
     )
 );
 $wp_customize->add_control(new Newses_Toggle_Control( $wp_customize, 'single_show_share_icon', 
@@ -808,6 +810,7 @@ $wp_customize->add_setting('newses_enable_single_post_admin_details',
 array(
     'default' => true,
     'sanitize_callback' => 'newses_sanitize_checkbox',
+    'transport' => $selective_refresh,
 )
 );
 $wp_customize->add_control(new Newses_Toggle_Control( $wp_customize, 'newses_enable_single_post_admin_details', 

@@ -315,6 +315,18 @@ function newses_customize_register($wp_customize) {
 			'selector'        => '.single-class .mg-header',
 			'render_callback' => 'newses_customize_partial_single_post_head_layout',
 		));
+		$wp_customize->selective_refresh->add_partial('single_show_featured_image', array(
+			'selector'        => '.single-class .single-main-content .col-lg-9.col-md-8, .single-class .single-main-content .col-md-12',
+			'render_callback' => 'newses_customize_partial_single_post_main_layout',
+		));
+		$wp_customize->selective_refresh->add_partial('single_show_share_icon', array(
+			'selector'        => '.single-class .single-main-content .col-lg-9.col-md-8, .single-class .single-main-content .col-md-12',
+			'render_callback' => 'newses_customize_partial_single_post_main_layout',
+		));
+		$wp_customize->selective_refresh->add_partial('newses_enable_single_post_admin_details', array(
+			'selector'        => '.single-class .single-main-content .col-lg-9.col-md-8, .single-class .single-main-content .col-md-12',
+			'render_callback' => 'newses_customize_partial_single_post_main_layout',
+		));
 	}
 
     $default = newses_get_default_theme_options();
@@ -414,6 +426,10 @@ function newses_customize_partial_single_layout() {
 
 function newses_customize_partial_single_post_head_layout() {
 	return do_action('newses_action_single_top_content');
+}
+
+function newses_customize_partial_single_post_main_layout() {
+	return do_action('newses_action_single_main_content');
 }
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
