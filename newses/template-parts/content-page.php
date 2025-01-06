@@ -2,7 +2,8 @@
 		<div class="col-md-12">
 			<div class="mg-card-box padding-20">
 			<?php if (have_posts()) {  while (have_posts()) : the_post();  the_content(); endwhile; } 
-	
+	    echo '</div>';
+	    echo '</div>';
 	} else {
 		 	$newses_page_layout = get_theme_mod('newses_page_layout','page-align-content-right');
             if($newses_page_layout == "page-align-content-left") { ?>
