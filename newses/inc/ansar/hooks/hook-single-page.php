@@ -188,8 +188,8 @@ if (!function_exists('newses_single_main_content')) :
                     $prev =  (is_rtl()) ? "left" : "right";
                     $next =  (is_rtl()) ? "right" : "left";
                     the_post_navigation(array(
-                        'prev_text' => '%title <div class="fa fa-angle-double-'.$prev.'"></div><span></span>',
-                        'next_text' => '<div class="fa fa-angle-double-'.$next.'"></div><span></span> %title',
+                        'prev_text' => '<span>%title</span><div class="fa fa-angle-double-'.$prev.'"></div>',
+                        'next_text' => '<div class="fa fa-angle-double-'.$next.'"></div><span>%title</span>',
                         'in_same_term' => true,
                     ));
                 ?>

@@ -4,7 +4,7 @@ Theme URI: https://themeansar.com/free-themes/newses/
 Author: Themeansar
 Author URI: https://themeansar.com
 Description: Newses is an indispensable Responsive News and Magazine template with a clean, modern design suitable for everyone who wants to share their stories and the latest breaking news or the hottest products. the theme comes light and dark color mode, Newses is suitable for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals, personal blogs, newspaper, agencies, publishing or review siteand any creative website. Newses is SEO friendly, WPML, Gutenberg, WooCommerce, translation and RTL ready. We offer great support and friendly help!. Live preview : https://demos.themeansar.com/newses and documentation at https://docs.themeansar.com/docs/newses/
-Version: 2.0.0.50
+Version: 2.0.0.51
 Tested up to: 6.7
 Requires PHP: 7.4
 Requires at least: 5.4
@@ -468,6 +468,19 @@ ul.navbar-nav:not(.sm-collapsible) .dropdown-item .sub-arrow {
     justify-content: space-between;
     width: 100%;
     flex-flow: row-reverse;
+	align-items: center;
+}
+.mg-blog-post-box .small.single .nav-links .nav-previous{
+	flex: 50%;
+}
+.mg-blog-post-box .small.single .nav-links .nav-previous a{
+	justify-content: end;
+}
+.mg-blog-post-box .small.single .nav-links .nav-next{
+	flex: 50%;
+}
+.mg-blog-post-box .small.single .nav-links .nav-next a{
+	justify-content: start;
 }
 .nav-links a {
     font-size: 1.2rem;
@@ -475,6 +488,9 @@ ul.navbar-nav:not(.sm-collapsible) .dropdown-item .sub-arrow {
     letter-spacing: -.02em;
     line-height: 1.2;
     width: 100%;
+	display: flex;
+	gap: 8px;
+	align-items: center;
 }
 .featured-image-caption{
 	display: block;
@@ -494,11 +510,12 @@ body {
 	font-size: 16px;
 	-webkit-font-smoothing: antialiased;
 	font-weight: 400;
-	line-height: 30px;
+    line-height: 1.78;
+    word-wrap: break-word;
+    word-break: break-word;
 	direction: rtl; 
 	text-align: start;
 }
-
 .sticky {
 	display: block;
 }
@@ -779,6 +796,22 @@ table, th, td {
 .pagination > .active > a, .pagination > .active > a:hover, .pagination > li > a:hover, .pagination > li > a:focus, .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
 	transition: all 0.3s ease 0s;
 }
+.single-nav-links {
+    text-align: center;
+    margin-top: 30px;
+}
+.single-nav-links a, .single-nav-links span {
+		transition: all 0.3s ease 0s;
+    font-size: 18px;
+    line-height: 40px;
+    margin: 0 6px 10px;
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    transition: all 0.3s ease 0s;
+    padding: 8px 15px;
+}
 button.mfp-close:hover, button.mfp-close:focus {
 	background: inherit;
 }
@@ -960,6 +993,7 @@ button.mfp-close:hover, button.mfp-close:focus {
     line-height: 27px;
     padding: 40px;
     font-size: 16px;
+	text-align: right;
 }
 .mg-blog-post-box .small > p {
 	margin-bottom: 20px;

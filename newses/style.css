@@ -4,7 +4,7 @@ Theme URI: https://themeansar.com/free-themes/newses/
 Author: Themeansar
 Author URI: https://themeansar.com
 Description: Newses is an indispensable Responsive News and Magazine template with a clean, modern design suitable for everyone who wants to share their stories and the latest breaking news or the hottest products. the theme comes light and dark color mode, Newses is suitable for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals, personal blogs, newspaper, agencies, publishing or review siteand any creative website. Newses is SEO friendly, WPML, Gutenberg, WooCommerce, translation and RTL ready. We offer great support and friendly help!. Live preview : https://demos.themeansar.com/newses and documentation at https://docs.themeansar.com/docs/newses/
-Version: 2.0.0.50
+Version: 2.0.0.51
 Tested up to: 6.7
 Requires PHP: 7.4
 Requires at least: 5.4
@@ -719,6 +719,22 @@ table, th, td {
 }
 td {
     padding: 8px 11px;
+}
+.alignleft, img.alignleft {
+    margin-right: 1.5em;
+    display: inline;
+    float: left;
+}
+.alignright, img.alignright {
+    margin-left: 1.5em;
+    display: inline;
+    float: right;
+}
+.aligncenter, img.aligncenter {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    clear: both;
 }
 /*---------------------------------------
 	2.4.Button Styles           
@@ -2793,6 +2809,19 @@ footer .mg-widget .woocommerce ul.cart_list li img, footer .mg-widget .woocommer
     justify-content: space-between;
     width: 100%;
     flex-flow: row-reverse;
+	align-items: center;
+}
+.mg-blog-post-box .small.single .nav-links .nav-previous{
+	flex: 50%;
+}
+.mg-blog-post-box .small.single .nav-links .nav-previous a{
+	justify-content: end;
+}
+.mg-blog-post-box .small.single .nav-links .nav-next{
+	flex: 50%;
+}
+.mg-blog-post-box .small.single .nav-links .nav-next a{
+	justify-content: start;
 }
 .nav-links a {
     font-size: 1.2rem;
@@ -2800,6 +2829,9 @@ footer .mg-widget .woocommerce ul.cart_list li img, footer .mg-widget .woocommer
     letter-spacing: -.02em;
     line-height: 1.2;
     width: 100%;
+	display: flex;
+	gap: 8px;
+	align-items: center;
 }
 .featured-image-caption{
 	display: block;
