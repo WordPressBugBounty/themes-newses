@@ -18,14 +18,18 @@
 
 			<div class="<?php echo esc_attr($newses_page_layout == 'page-full-width-content' ? 'col-md-12' : 'col-md-8') ?>">
 				<div class="mg-card-box padding-20"> <?php 
-					while ( have_posts() ) : the_post(); 
-						the_post_thumbnail( '', array( 'class'=>'img-responsive' ) );
+					while ( have_posts() ) : the_post();
+						if(has_post_thumbnail()) {
+							echo '<figure class="post-thumbnail">';
+								the_post_thumbnail( '', array( 'class'=>'img-responsive img-fluid' ) );
+							echo '</figure>';
+						}
 						the_content();
 						
-							wp_link_pages(array(
-								'before' => '<div class="link btn-theme">' . esc_html__('Pages:', 'newses'),
-								'after' => '</div>',
-							));
+						wp_link_pages(array(
+							'before' => '<div class="link btn-theme">' . esc_html__('Pages:', 'newses'),
+							'after' => '</div>',
+						));
 					endwhile;
 					newses_edit_link();
 
