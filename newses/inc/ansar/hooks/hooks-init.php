@@ -22,3 +22,8 @@ require get_template_directory().'/inc/ansar/hooks/hook-meta.php';
  * Single Page Hookes
  */
 require get_template_directory().'/inc/ansar/hooks/hook-single-page.php';
+
+/**
+ * Footer section.
+ */
+require get_template_directory().'/inc/ansar/hooks/hook-footer.php';

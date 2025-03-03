@@ -4,8 +4,8 @@ Author: Themeansar
 Requires at least: WordPress 5.4
 Tested up to: WordPress 6.7
 Requires PHP: 7.4
-Stable tag: 2.0.0.52
-Version: 2.0.0.52
+Stable tag: 2.0.0.53
+Version: 2.0.0.53
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns ,right-sidebar, flexible-header, custom-background, custom-header, custom-menu, editor-style, featured-images, footer-widgets,  theme-options, threaded-comments, rtl-language-support, translation-ready, full-width-template, custom-logo, blog, news
@@ -626,3 +626,6 @@ Added Selective Refresh to Pages Layout.
 
 = Version 2.0.0.52
 * Fixed Featured Image Issue on pages.
+
+= Version 2.0.0.53
+* Added You Missed Section Function.
