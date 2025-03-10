@@ -49,3 +49,47 @@ function newses_footer_missed_section(){
 }
 endif;
 add_action('newses_action_footer_missed_section','newses_footer_missed_section');
+
+
+if (!function_exists('newses_footer_copyright_section')) :
+    /**
+     *  Footer
+     *
+     * @since Newses
+     *
+     */
+    function newses_footer_copyright_section(){ ?>
+        <div class="container">
+            <div class="row">
+            <?php $newses_enable_footer_menu = esc_attr(get_theme_mod('newses_enable_footer_menu','true'));
+                $copy_center = $newses_enable_footer_menu == true ? 'col-md-6 text-xs' : 'col-md-12 text-xs text-center'; ?>
+                    <div class="<?php echo $copy_center ?>">
+                        <p>
+                            <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'newses' ) ); ?>">
+                                <?php printf( esc_html__( 'Proudly powered by %s', 'newses' ), 'WordPress' ); ?>
+                            </a>
+                            <span class="sep"> | </span>
+                            <?php
+                            /* translators: placeholder replaced with string */
+                            printf( esc_html__( 'Theme: %1$s by %2$s.', 'newses' ), 'Newses', '<a href="' . esc_url( __( 'https://themeansar.com/', 'newses' ) ) . '" rel="designer">Themeansar</a>' );
+                            ?>
+                        </p>
+                    </div>
+                    <?php if($newses_enable_footer_menu == true){ ?>
+                        <div class="col-md-6 text-md-right footer-menu text-xs">
+                            <?php wp_nav_menu( array(
+                                'theme_location' => 'footer',
+                                'container'  => 'nav-collapse collapse navbar-inverse-collapse',
+                                'menu_class' => 'info-right',
+                                'fallback_cb' => 'newses_fallback_page_menu',
+                                'walker' => new newses_nav_walker()
+                            ) ); 
+                            ?>
+                        </div>
+                    <?php } ?>
+            </div>
+        </div>
+    <?php
+}
+endif;
+add_action('newses_action_footer_copyright_section','newses_footer_copyright_section');
