@@ -32,35 +32,8 @@
                 </div>
                 <?php } ?>
                 <!--End mg-footer-widget-area-->
-                <!--Start mg-footer-widget-area-->
-                <div class="mg-footer-bottom-area">
-                    <div class="container">
-                        <?php if ( is_active_sidebar( 'footer_widget_area' ) ) { ?>
-                        <div class="divide-line"></div>
-                        <?php } ?>
-                        <div class="row align-items-center">
-                            <!--col-md-4-->
-                            <div class="col-md-6">
-                                <?php the_custom_logo(); 
-                                if (display_header_text()) : ?>
-                                <div class="site-branding-text">
-                                    <p class="site-title-footer"> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo esc_html(get_bloginfo( 'name' )); ?></a></p>
-                                    <p class="site-description-footer"><?php echo esc_html(get_bloginfo( 'description' )); ?></p>
-                                </div>
-                                <?php endif; ?>
-                            </div> 
-                            <div class="col-md-6 text-right text-xs">    
-                                <ul class="mg-social">
-                                    <?php do_action('newses_action_footer_social_icon'); ?> 
-                                </ul>
-                           </div>
-                        </div>
-                        <!--/row-->
-                    </div>
-                    <!--/container-->
-                </div>
-                <!--End mg-footer-widget-area-->
-
+                
+                <?php do_action('newses_action_footer_bottom_area'); ?>
                 <div class="mg-footer-copyright">
                     <?php do_action('newses_action_footer_copyright_section'); ?>
                 </div>
