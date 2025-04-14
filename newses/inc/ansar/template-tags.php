@@ -8,18 +8,15 @@
  */
 
 if (!function_exists('newses_post_categories')) :
-    function newses_post_categories($separator = '&nbsp')
-    {
+    function newses_post_categories($separator = '&nbsp') {
         $global_show_categories = newses_get_option('global_show_categories');
         if ($global_show_categories == 'no') {
             return;
         }
-
         // Hide category and tag text for pages.
         if ('post' === get_post_type()) {
 
             global $post;
-
             $post_categories = get_the_category($post->ID);
             if ($post_categories) {
                 echo '<div class="mg-blog-category">';
@@ -46,15 +43,13 @@ endif;
 
 if (!function_exists('newses_get_category_color_class')) :
 
-    function newses_get_category_color_class($term_id)
-    {
+    function newses_get_category_color_class($term_id) {
 
         $color_id = "category_color_" . $term_id;
         // retrieve the existing value(s) for this meta field. This returns an array
         $term_meta = get_option($color_id);
         $color_class = ($term_meta) ? $term_meta['color_class_term_meta'] : '';
         return $color_class;
-
 
     }
 endif;
@@ -161,7 +156,6 @@ if ( ! function_exists( 'newses_the_excerpt' ) ) :
         if (preg_match('/\s*(&nbsp;|\xA0)\s*/u', $source_content)) {
             // Remove non-breaking space and its variations from the text
             $source_content = preg_replace('/\s*(&nbsp;|\xA0)\s*/u', ' ', $source_content);
-            
         }
 
         $source_content = preg_replace( '`\[[^\]]*\]`', '', $source_content );
