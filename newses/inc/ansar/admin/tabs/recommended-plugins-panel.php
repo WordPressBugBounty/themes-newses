@@ -42,7 +42,7 @@
 					<p><?php echo esc_html( 'First of install and activate', 'newses' ); ?></h3>
 					<a target="_blank" href="<?php echo esc_url( 'https://wordpress.org/plugins/ansar-import/' ); ?>"><?php esc_html_e( 'Ansar Import Plugin', 'newses' ); ?></a>
 					<?php echo esc_html('then install and activate','newses'); ?>
-					<?php echo esc_html(' After that, import sample demo content, visit Ansar Demo Importer Data menu under Appearance.', 'newses'); ?></p>
+					<?php echo esc_html(' After that, import sample demo content, visit Ansar Demo Importer theme demos in under ansar import menu.', 'newses'); ?></p>
 
 
 					<?php endif; ?>
@@ -50,7 +50,7 @@
 
 
 					<?php echo '<div class="button-wrap">';
-					echo Newses_Getting_Started_Page_Plugin_Helper::instance()->get_button_html( $newses_plugin['slug'] );
+					echo Newses_Getting_Started_Page_Plugin_Helper::instance()->get_button_html( $newses_plugin['slug'], array('redirect' => esc_url( admin_url('admin.php?page=ansar-demo-import') ))  );
 					echo '</div>';
 					?>
 				</div>
