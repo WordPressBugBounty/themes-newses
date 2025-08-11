@@ -98,7 +98,7 @@ if (!function_exists('newses_footer_bottom_area')) :
     /**
      *  Footer Bottom Area
      *
-     * @since Newsup
+     * @since newses
      *
      */
     function newses_footer_bottom_area() { ?>

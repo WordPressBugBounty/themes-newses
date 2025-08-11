@@ -16,7 +16,9 @@
   font-family: FontAwesome;
   color: #fff;
 }
-
+.d-flex{
+    display: flex !important;
+}
 #customize-control-newses_theme_color input, #customize-control-newses_default_bg_image input{display:none;}
 
 #customize-control-newses_default_bg_image img {height:40px; width:40px; }
@@ -74,31 +76,39 @@ li#customize-control-display_header_text, li#customize-control-newses_center_log
     margin-bottom: 12px;
     line-height: 1.4;
 }
-a.button.button-primary.button-hero.newses-button-padding {
-    margin-right: 10px;
-}
-a.button.button-blue-secondary.button_info{
-    margin-right: 10px; 
-}
-.newses-documentation, .newses-demos {
-    display: inline;
-    margin-right: 10px;
-    margin-left: 5px;
-}
 .newses-notice_text .panel-column-6{
     display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
     flex-direction: column;
+    justify-content: center;
+    gap: 20px;
 }
 .newses-notice_text .notice p, .notice-title, div.updated p, div.error p, .form-table td .notice p {
     padding-right: 25px;
     font-size: 15px;
 }
-.newses-notice_text .panel-column-6 .panel-column-one {
+.newses-notice_text .panel-column-6 .newses-notice-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+.newses-notice-buttons a{
     display: flex;
     align-items: center;
+    justify-content: center;
+    gap: 5px;
 }
-.newses-notice_text .panel-column-6 .panel-column-two {
-    margin-top: 30px;
+.panel-column-6 .newses-notice-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.newses-notice-link {
+    display: inline;
+    color: #2271b1;
 }
 #customize-controls .control-section > h3.accordion-section-title {
     display: flex;

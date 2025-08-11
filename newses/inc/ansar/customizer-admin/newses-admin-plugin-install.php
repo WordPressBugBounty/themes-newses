@@ -38,22 +38,26 @@ function newses_deprecated_hook_admin_notice() {
                         <p><?php esc_html_e("Thank you for choosing newses theme. To take full advantage of the complete features of the theme click the Starter Sites and Install and Activate the", "newses");?> <a href="https://wordpress.org/plugins/ansar-import"><?php esc_html_e("Ansar Import", "newses");?></a> <?php esc_html_e("plugin then use the demo importer and install the Newses Demo according to your need.", "newses"); ?></p>
 
                             <div class="panel-column-6">
-                                <div class="panel-column-one">
-                                    <a class="newses-btn-get-started button button-primary button-hero newses-button-padding" href="#" data-name="" data-slug=""><?php esc_html_e( 'Import Demo', 'newses' ) ?></a>
+                                <div class="newses-notice-buttons">
+                                    
+                                    <a class="newses-btn-get-started button button-primary d-flex button-hero newses-button-padding" href="#" data-name="" data-slug=""><span aria-hidden="true" class="dashicons dashicons-images-alt"></span><?php esc_html_e( 'Get Started', 'newses' ) ?></a>
 
-                                    <a class="newses-btn-get-started-customize button button-primary button-hero newses-button-padding" href="<?php echo esc_url( admin_url( '/customize.php' ) ); ?>" data-name="" data-slug=""><?php esc_html_e( 'Customize Site', 'newses' ) ?></a>
+                                    <a class="newses-btn-get-started-customize button button-primary d-flex button-hero newses-button-padding" href="<?php echo esc_url( admin_url( '/customize.php' ) ); ?>" data-name="" data-slug=""><span aria-hidden="true" class="dashicons dashicons-welcome-widgets-menus"></span><?php esc_html_e( 'Customize Site', 'newses' ) ?></a>
 
-                                    <a href="<?php echo esc_url( admin_url( 'themes.php?page=newses-getting-started' ) ); ?>" class="button button-blue-secondary button_info" style="text-decoration: none;"><?php echo esc_html__('Get started with newses','newses'); ?></a>
+                                    <a href="<?php echo esc_url( admin_url( 'themes.php?page=newses-getting-started' ) ); ?>" class="button button-blue-secondary d-flex button_info" style="text-decoration: none;"><?php echo esc_html__('Get started with newses','newses'); ?></a>
                                 </div>
-                                <div class="panel-column-two">
-                                    <div class="newses-documentation">
-                                    <span aria-hidden="true" class="dashicons dashicons-external"></span>
-                                    <a class="newses-documentation" href="<?php echo esc_url('https://docs.themeansar.com/docs/newses')?>" data-name="" data-slug=""><?php esc_html_e( 'View Documentation', 'newses' ) ?></a>
+                                <div class="newses-notice-links">
+                                   <div class="newses-demos newses-notice-link">
+                                        <span aria-hidden="true" class="dashicons dashicons-images-alt"></span>
+                                        <a class="newses-demos" href="<?php echo esc_url('https://demos.themeansar.com/newses')?>" data-name="" data-slug=""><?php esc_html_e( 'View Demos', 'newses' ) ?></a>
                                     </div>
-
-                                    <div class="newses-demos">
-                                    <span aria-hidden="true" class="dashicons dashicons-external"></span>
-                                    <a class="newses-demos" href="<?php echo esc_url('https://demos.themeansar.com/newses-demos/')?>" data-name="" data-slug=""><?php esc_html_e( 'View Demos', 'newses' ) ?></a>
+                                    <div class="newses-documentation newses-notice-link">
+                                        <span aria-hidden="true" class="dashicons dashicons-list-view"></span>
+                                        <a class="newses-documentation" href="<?php echo esc_url('https://docs.themeansar.com/docs/newses/')?>" data-name="" data-slug=""><?php esc_html_e( 'View Documentation', 'newses' ) ?></a>
+                                    </div>
+                                    <div class="newses-support newses-notice-link">
+                                        <span aria-hidden="true" class="dashicons dashicons-format-chat"></span>
+                                        <a class="newses-support" href="<?php echo esc_url('https://themeansar.ticksy.com/')?>" data-name="" data-slug=""><?php esc_html_e( 'Support', 'newses' ) ?></a>
                                     </div>
                                 </div>
                             </div>
