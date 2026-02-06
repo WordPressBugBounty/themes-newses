@@ -520,4 +520,48 @@ if ( ! function_exists( 'newses_footer_social_icon' ) ) :
 endif;
 add_action('newses_action_footer_social_icon','newses_footer_social_icon');
 
-?>
+if ( class_exists( 'WooCommerce' ) ) {
+
+    // Display product categories before title
+    if ( ! function_exists( 'newses_show_product_category_before_title' ) ) {
+        function newses_show_product_category_before_title() {
+            global $product;
+
+            if ( ! $product ) {
+                return;
+            }
+
+            echo wc_get_product_category_list(
+                $product->get_id(),
+                ', ',
+                '<div class="woocommerce-loop-product__categories">', 
+                '</div>'
+            );
+        }
+    }
+
+    // Remove default product title
+    remove_action( 'woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title', 10 );
+
+    // Add product category before title
+    add_action( 'woocommerce_shop_loop_item_title', 'newses_show_product_category_before_title', 5 );
+
+    // Add clickable product title back
+    add_action( 'woocommerce_shop_loop_item_title', 'custom_clickable_product_title', 10 );
+    function custom_clickable_product_title() {
+        echo '<h2 class="woocommerce-loop-product__title"><a href="' . esc_url( get_permalink() ) . '">' . get_the_title() . '</a></h2>';
+    }
+    function newses_custom_pagination_icons( $args ) {
+        // Replace text with FontAwesome icons
+        
+        $prev_text =  (is_rtl()) ? "right" : "left";
+        $next_text =  (is_rtl()) ? "left" : "right";
+
+        $args['prev_text'] = '<i class="fa fa-angle-'.$prev_text.'"></i>'; 
+        $args['next_text'] = '<i class="fa fa-angle-'.$next_text.'"></i>';
+        
+        return $args;
+    }
+    add_filter( 'woocommerce_pagination_args', 'newses_custom_pagination_icons' );
+    
+}

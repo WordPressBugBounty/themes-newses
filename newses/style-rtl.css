@@ -4,8 +4,8 @@ Theme URI: https://themeansar.com/free-themes/newses/
 Author: Themeansar
 Author URI: https://themeansar.com
 Description: Newses is an indispensable Responsive News and Magazine template with a clean, modern design suitable for everyone who wants to share their stories and the latest breaking news or the hottest products. the theme comes light and dark color mode, Newses is suitable for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals, personal blogs, newspaper, agencies, publishing or review siteand any creative website. Newses is SEO friendly, WPML, Gutenberg, WooCommerce, translation and RTL ready. We offer great support and friendly help!. Live preview : https://demos.themeansar.com/newses and documentation at https://docs.themeansar.com/docs/newses/
-Version: 2.0.0.60
-Tested up to: 6.8
+Version: 2.0.0.67
+Tested up to: 6.9
 Requires PHP: 7.4
 Requires at least: 6.6
 Tags: one-column, two-columns ,right-sidebar, flexible-header, custom-background, custom-header, custom-menu, editor-style, featured-images, footer-widgets,  theme-options, threaded-comments, rtl-language-support, translation-ready, full-width-template, custom-logo, blog, news
@@ -2007,6 +2007,13 @@ button.mfp-close:hover, button.mfp-close:focus {
 .wp-block-latest-posts__list .wp-block-latest-posts__featured-image + .wp-block-latest-posts__post-title:hover{
 	padding: 0;
 }
+.mg-sidebar :is(ul.wp-block-categories-list.wp-block-categories, ul.wp-block-archives-list.wp-block-archives) li {
+	display: flex;
+	justify-content: space-between;
+}
+.mg-sidebar :is(ul.wp-block-categories-list.wp-block-categories li.current-cat, ul.wp-block-archives-list.wp-block-archives li:has([aria-current="page"])) {
+	font-weight: 600;
+}
 ol.wp-block-latest-comments {
     padding: 0;
 }
@@ -2575,6 +2582,14 @@ address i {
 .woocommerce ul.products li.product a img:hover {
 	opacity: 0.6;
 }
+.woocommerce ul.products li.product .woocommerce-loop-product__categories a {
+    font-size: 0.9375rem;
+}
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+    padding: 0.5em;
+    font-size: 1.5rem;
+	text-align: center;
+}
 .woocommerce-page .woocommerce-ordering select {
 	padding: 12px 15px 12px 10px;
 	color: #A0A0A0;
@@ -2802,11 +2817,23 @@ footer .mg-widget .woocommerce ul.cart_list li img, footer .mg-widget .woocommer
 	border: none;
 }
 .woocommerce nav.woocommerce-pagination ul li a, .woocommerce nav.woocommerce-pagination ul li span {
-	float: right;
-	line-height: 1.42857;
+	float: left;
 	margin: 6px;
-	padding: 6px 12px;
-	border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+    font-size: 18px;
+    line-height: 40px;
+    border-radius: 4px;
+    padding: 0px;
+    vertical-align: baseline;
+    white-space: nowrap;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+    position: relative;
 }
 /*woocommerce-price-filter*/
 .woocommerce .widget_price_filter .price_slider_wrapper .ui-widget-content {

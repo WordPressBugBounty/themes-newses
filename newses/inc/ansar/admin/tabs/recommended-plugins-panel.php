@@ -33,18 +33,20 @@
 					</span>
 					
 					<?php if($newses_plugin['slug'] == 'shortbuild') : ?>
-					<p><?php esc_html_e('To display Newses Frontpage widget, please install the','newses'); ?>
-					<a target="_blank" href="<?php echo esc_url( 'https://wordpress.org/plugins/shortbuild/' ); ?>"><?php esc_html_e( 'Shortbuild plugin', 'newses' ); ?></a><?php esc_html_e(' then go to Widgets menu under Appearance and drag wigdet in Front-page content Section','newses'); ?></p>
+					<p><?php printf( esc_html__('To display Newses Frontpage widget, please install the %1$s then go to Widgets menu under Appearance and drag widget in Front-page content Section.','newses'), '<a target="_blank" href="'.esc_url('https://wordpress.org/plugins/shortbuild/').'">'.esc_html__('Shortbuild plugin', 'newses').'</a>'); ?></p>
 					<?php endif; ?>
 
 
 					<?php if($newses_plugin['slug'] == 'ansar-import') : ?>
-					<p><?php echo esc_html( 'First of install and activate', 'newses' ); ?></h3>
-					<a target="_blank" href="<?php echo esc_url( 'https://wordpress.org/plugins/ansar-import/' ); ?>"><?php esc_html_e( 'Ansar Import Plugin', 'newses' ); ?></a>
-					<?php echo esc_html('then install and activate','newses'); ?>
-					<?php echo esc_html(' After that, import sample demo content, visit Ansar Demo Importer theme demos in under ansar import menu.', 'newses'); ?></p>
-
-
+					<p>
+						<?php
+							printf(
+								/* translators: %s: plugin name with link. */
+								esc_html__( 'First, install and activate the %s plugin. After that, import sample demo content by visiting the Ansar Demo Importer under the "Ansar Import" menu.', 'newses' ),
+								'<a target="_blank" href="' . esc_url( 'https://wordpress.org/plugins/ansar-import/' ) . '">' . esc_html__( 'Ansar Import Plugin', 'newses' ) . '</a>'
+							);
+						?>
+					</p>
 					<?php endif; ?>
 
 

@@ -35,8 +35,15 @@ function newses_deprecated_hook_admin_notice() {
                                 printf( esc_html__('Welcome to %1$s', 'newses'), esc_html( $theme_info->Name ), esc_html( $theme_info->Version ) ); ?>
                         </h1>
                         
-                        <p><?php esc_html_e("Thank you for choosing newses theme. To take full advantage of the complete features of the theme click the Starter Sites and Install and Activate the", "newses");?> <a href="https://wordpress.org/plugins/ansar-import"><?php esc_html_e("Ansar Import", "newses");?></a> <?php esc_html_e("plugin then use the demo importer and install the Newses Demo according to your need.", "newses"); ?></p>
-
+                        <p>
+                            <?php
+                                printf(
+                                    /* translators: %s: plugin name with link */
+                                    esc_html__( 'Thank you for choosing Newses theme. To take full advantage of the complete features of the theme, please install and activate the %s plugin. You can then use the demo importer to install a Newses demo that suits your needs.', 'newses' ),
+                                    '<a href="https://wordpress.org/plugins/ansar-import" target="_blank">' . esc_html__( 'Ansar Import', 'newses' ) . '</a>'
+                                );
+                            ?>
+                        </p>
                             <div class="panel-column-6">
                                 <div class="newses-notice-buttons">
                                     

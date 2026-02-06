@@ -133,6 +133,13 @@ function newses_setup() {
     // Added theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 	
+	add_theme_support('custom-spacing');
+	add_theme_support('appearance-tools');
+	add_theme_support('custom-units');
+	add_theme_support('custom-line-height');
+	add_theme_support('border');
+	add_theme_support( 'link-color' );
+
 	//Custom logo
 	add_theme_support(
     'custom-logo',
