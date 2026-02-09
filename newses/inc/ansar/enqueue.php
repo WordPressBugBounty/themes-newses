@@ -8,13 +8,7 @@
 
 	wp_style_add_data('newses-style', 'rtl', 'replace' );
 
-	$skin_color = get_theme_mod('newses_skin_color','defaultcolor');
-
-	if($skin_color == 'purple')	{
-		wp_enqueue_style('newses-purple', get_template_directory_uri() . '/css/colors/purple.css');
-	} else {
-		wp_enqueue_style('newses-default', get_template_directory_uri() . '/css/colors/default.css');
-	}
+	wp_enqueue_style('newses-default', get_template_directory_uri() . '/css/colors/default.css');
 
 	wp_enqueue_style('all-font-awesome',get_template_directory_uri().'/css/font-awesome.css');
 	
@@ -40,6 +34,7 @@
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	newses_custom_colors();
 }
 add_action('wp_enqueue_scripts', 'newses_scripts');
 
@@ -114,3 +109,19 @@ function newses_admin_scripts() {
 }
 endif;
 add_action( 'admin_enqueue_scripts', 'newses_admin_scripts' );
+
+if ( ! function_exists( 'newses_custom_colors' ) ) :
+function newses_custom_colors() {
+	$skin_color = get_theme_mod('newses_skin_color','defaultcolor');
+
+    $primary_color = $skin_color == 'purple' ? '#6001d2' : '#C70909';
+
+    $custom_css = "
+        :root {
+            --pri-color: {$primary_color};
+        }
+    ";
+
+    wp_add_inline_style( 'newses-style', $custom_css );
+}
+endif;

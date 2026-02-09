@@ -1,6 +1,3 @@
-:root {
-	--pri-color: #C70909;
-}
 /*==================== Top Bar color ====================*/
 .mg-headwidget.light .mg-tpt-txnlst {
     background: var(--pri-color);
