@@ -4,7 +4,7 @@ Theme URI: https://themeansar.com/free-themes/newses/
 Author: Themeansar
 Author URI: https://themeansar.com
 Description: Newses is an indispensable Responsive News and Magazine template with a clean, modern design suitable for everyone who wants to share their stories and the latest breaking news or the hottest products. the theme comes light and dark color mode, Newses is suitable for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals, personal blogs, newspaper, agencies, publishing or review siteand any creative website. Newses is SEO friendly, WPML, Gutenberg, WooCommerce, translation and RTL ready. We offer great support and friendly help!. Live preview : https://demos.themeansar.com/newses and documentation at https://docs.themeansar.com/docs/newses/
-Version: 2.0.0.72
+Version: 2.0.0.73
 Tested up to: 6.9
 Requires PHP: 7.4
 Requires at least: 6.6
@@ -1518,6 +1518,7 @@ button.mfp-close:hover, button.mfp-close:focus {
 .title_small_post, .small-post .title{
 	display: block;
     display: -webkit-box;
+	line-clamp: 2;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -1540,6 +1541,7 @@ button.mfp-close:hover, button.mfp-close:focus {
 .mg-blog-post .tittle, .mg-blog-inner h1.title, .mg-blog-post-box h1.title, .small-list-post h5.title, .mg-blog-post .bottom h1, .title_small_post, .mg-posts-modul-6 .mg-sec-top-post .title, .mg-no-list-area .mg-blog-post h3 {
 	overflow: hidden;
   	display: -webkit-box;
+	line-clamp: 2;
 	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;
 }
@@ -2367,7 +2369,6 @@ footer .site-title-footer {
 	padding-left: 0;
 }
 .mg-social li span.icon-soci {
-	display: inline-block;
 	float: right;
 	height: 35px;
 	line-height: 35px;
@@ -2823,7 +2824,6 @@ footer .mg-widget .woocommerce ul.cart_list li img, footer .mg-widget .woocommer
 	float: left;
 	margin: 6px;
     cursor: pointer;
-    display: inline-block;
     transition: all 0.3s ease 0s;
     font-size: 18px;
     line-height: 40px;
@@ -2898,6 +2898,7 @@ footer .mg-widget .woocommerce ul.cart_list li img, footer .mg-widget .woocommer
     font-weight: 700;
 	display: block;
     display: -webkit-box;
+	line-clamp: 4;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -2931,6 +2932,7 @@ footer .mg-widget .woocommerce ul.cart_list li img, footer .mg-widget .woocommer
     margin: 10px 0;
 	display: block;
     display: -webkit-box;
+	line-clamp: 2;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -2939,6 +2941,7 @@ footer .mg-widget .woocommerce ul.cart_list li img, footer .mg-widget .woocommer
 .mg-posts-sec .mg-posts-sec-post h4.title{
 	display: block;
     display: -webkit-box;
+	line-clamp: 3;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -3006,6 +3009,7 @@ footer .mg-widget .woocommerce ul.cart_list li img, footer .mg-widget .woocommer
     font-size: 34px;
     display: block;
     display: -webkit-box;
+	line-clamp: 3;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -3160,7 +3164,6 @@ footer .mg-widget .woocommerce ul.cart_list li img, footer .mg-widget .woocommer
     background-color: #fff;
     color: #999;
     cursor: pointer;
-    display: inline-block;
     transition: all 0.3s ease 0s;
     font-size: 18px;
     line-height: 40px;
