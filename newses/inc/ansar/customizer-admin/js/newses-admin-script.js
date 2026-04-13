@@ -1,6 +1,6 @@
 ( function( $ ){
     $( document ).ready( function(){
-      $( '.newses-btn-get-started' ).on( 'click', function( e ) {
+      $( '.newses-btn-get-started.load' ).on( 'click', function( e ) {
           e.preventDefault();
           $( this ).html( 'Processing.. Please wait' ).addClass( 'updating-message' );
           $.post(newses_ajax_object.ajax_url, { 'action' : 'install_act_plugin' }, function( response ){
