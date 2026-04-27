@@ -242,6 +242,9 @@ blockquote::before {
 .recentarea .content a{
 	color: #000;
 }
+.recentarea .content a:hover{
+	color: var(--pri-color);
+}
 .top-right-area .nav-tabs > li > a {
     border-color: #eee;
     color: #212121;
@@ -619,6 +622,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 .nav-next a, .nav-previous a {
     color: #000;
+}
+.nav-next a:hover, .nav-previous a:hover {
+    color: var(--pri-color);
 }
 /*==================== typo ====================*/
 .mg-breadcrumb-title h1 {

@@ -4,7 +4,7 @@ Theme URI: https://themeansar.com/free-themes/newses/
 Author: Themeansar
 Author URI: https://themeansar.com
 Description: Newses is an indispensable Responsive News and Magazine template with a clean, modern design suitable for everyone who wants to share their stories and the latest breaking news or the hottest products. the theme comes light and dark color mode, Newses is suitable for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals, personal blogs, newspaper, agencies, publishing or review siteand any creative website. Newses is SEO friendly, WPML, Gutenberg, WooCommerce, translation and RTL ready. We offer great support and friendly help!. Live preview : https://demos.themeansar.com/newses and documentation at https://docs.themeansar.com/docs/newses/
-Version: 2.0.0.74
+Version: 2.0.0.75
 Tested up to: 6.9
 Requires PHP: 7.4
 Requires at least: 6.6
@@ -2819,6 +2819,14 @@ footer .mg-widget .woocommerce ul.cart_list li img, footer .mg-widget .woocommer
 	height: auto;
 	margin: 0;
 }
+.navigation.pagination .nav-links{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.navigation.pagination .nav-links .page-numbers{
+	justify-content: center;
+}
 .navigation.pagination .nav-links .page-numbers, .navigation.pagination .nav-links a {
     background-color: #fff;
     color: #999;
@@ -2837,7 +2845,6 @@ footer .mg-widget .woocommerce ul.cart_list li img, footer .mg-widget .woocommer
     transition: all 0.3s ease 0s;
     text-decoration: none;
     position: relative;
-    float: left;
 }
 .navigation.pagination > li:first-child > a, .navigation.pagination > li:first-child > span {
     border-radius: 30px;
