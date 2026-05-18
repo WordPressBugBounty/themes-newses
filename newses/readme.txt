@@ -4,8 +4,8 @@ Author: Themeansar
 Requires at least: WordPress 6.6
 Tested up to: WordPress 6.9
 Requires PHP: 7.4
-Stable tag: 2.0.0.75
-Version: 2.0.0.75
+Stable tag: 2.0.0.76
+Version: 2.0.0.76
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns ,right-sidebar, flexible-header, custom-background, custom-header, custom-menu, editor-style, featured-images, footer-widgets,  theme-options, threaded-comments, rtl-language-support, translation-ready, full-width-template, custom-logo, blog, news
@@ -696,3 +696,7 @@ Added Selective Refresh to Pages Layout.
 
 = Version 2.0.0.75
 * Fixed Styling Issue.
+
+= Version 2.0.0.76
+* Expanded localization with new translation files.
+* Added multi-language support for German, Russian, Spanish and Dutch
