@@ -120,8 +120,14 @@ li#customize-control-display_header_text, li#customize-control-newses_center_log
 #customize-controls li#accordion-section-newses .accordion-section-title::after{
     content: ''; 
 }
-
 .admin-bar .newses-notice-buttons :is( .newses-btn-get-started, .newses-btn-get-started-customize) .dashicons {
     line-height: 1.2;
     color: inherit !important;
+}
+/* admin notice media query */
+@media(max-width: 767px){  
+  .newses-notice-started .newses-notice-content{
+    flex-direction: column;
+    gap: 30px;
+  }
 }

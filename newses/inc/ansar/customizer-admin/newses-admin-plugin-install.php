@@ -2,17 +2,31 @@
  * AJAX handler to store the state of dismissible notices.
  */
 function newses_ajax_notice_handler() {
+    // Check user capability to prevent Broken Access Control
+    if ( ! current_user_can( 'edit_theme_options' ) ) {
+        wp_die();
+    }
+
+    // Security Nonce verification to prevent CSRF
+    check_ajax_referer( 'newses_notice_nonce', 'security' );
+
     if ( isset( $_POST['type'] ) ) {
         // Pick up the notice "type" - passed via jQuery (the "data-notice" attribute on the notice)
         $type = sanitize_text_field( wp_unslash( $_POST['type'] ) );
         // Store it in the options table
         update_option( 'dismissed-' . $type, TRUE );
     }
+    wp_die();
 }
 
 add_action( 'wp_ajax_newses_dismissed_notice_handler', 'newses_ajax_notice_handler' );
 
 function newses_deprecated_hook_admin_notice() {
+        // Check user capability to prevent unprivileged users (e.g., Subscribers) from seeing this notice.
+        if ( ! current_user_can( 'edit_theme_options' ) ) {
+            return;
+        }
+
         // Check if it's been dismissed...
         if ( ! get_option('dismissed-get_started', FALSE ) ) {
             // Added the class "notice-get-started-class" so jQuery pick it up and pass via AJAX,
@@ -87,6 +101,14 @@ add_action( 'admin_notices', 'newses_deprecated_hook_admin_notice' );
 add_action( 'wp_ajax_install_act_plugin', 'newses_admin_info_install_plugin' );
 
 function newses_admin_info_install_plugin() {
+    // Check user capability to prevent unprivileged users from installing plugins
+    if ( ! current_user_can( 'install_plugins' ) ) {
+        wp_send_json_error( array( 'message' => __( 'Sorry, you are not allowed to access this page.', 'newses' ) ), 403 );
+    }
+
+    // Security Nonce verification
+    check_ajax_referer( 'newses_install_plugin_nonce', 'security' );
+
     /**
      * Install Plugin.
      */
@@ -105,10 +127,17 @@ function newses_admin_info_install_plugin() {
         $skin     = new WP_Ajax_Upgrader_Skin();
         $upgrader = new Plugin_Upgrader( $skin );
         $result   = $upgrader->install( $api->download_link );
+
+        if ( is_wp_error( $result ) ) {
+            wp_send_json_error( array( 'message' => __( 'Plugin installation failed.', 'newses' ) ) );
+        }
     }
 
     // Activate plugin.
-    if ( current_user_can( 'activate_plugin' ) ) {
+    // Note: changed from 'activate_plugin' (singular) to 'activate_plugins' (plural) for proper WP core capability checking
+    if ( current_user_can( 'activate_plugins' ) ) {
         $result = activate_plugin( 'ansar-import/ansar-import.php' );
     }
+
+    wp_send_json_success( array( 'message' => __( 'Plugin installed and activated successfully.', 'newses' ) ) );
 }
