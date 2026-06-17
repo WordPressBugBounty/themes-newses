@@ -124,6 +124,10 @@ li#customize-control-display_header_text, li#customize-control-newses_center_log
     line-height: 1.2;
     color: inherit !important;
 }
+#customize-controls li#accordion-section-newses .accordion-section-title .alignright{
+  color: #fff;
+  border-color: #fff;
+}
 /* admin notice media query */
 @media(max-width: 767px){  
   .newses-notice-started .newses-notice-content{
