@@ -4,8 +4,8 @@ Author: Themeansar
 Requires at least: WordPress 6.7
 Tested up to: WordPress 7.0
 Requires PHP: 7.4
-Stable tag: 2.0.0.79
-Version: 2.0.0.79
+Stable tag: 2.0.0.80
+Version: 2.0.0.80
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns ,right-sidebar, flexible-header, custom-background, custom-header, custom-menu, editor-style, featured-images, footer-widgets,  theme-options, threaded-comments, rtl-language-support, translation-ready, full-width-template, custom-logo, blog, news
@@ -709,3 +709,6 @@ Added Selective Refresh to Pages Layout.
 
 = Version 2.0.0.79
 * Inhanced WP Color Variables in Customizer
+
+= Version 2.0.0.80
+* Fixed empty author description paragraph output.
