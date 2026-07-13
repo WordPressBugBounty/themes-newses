@@ -4,7 +4,7 @@ Theme URI: https://themeansar.com/free-themes/newses/
 Author: Themeansar
 Author URI: https://themeansar.com
 Description: Newses is an indispensable Responsive News and Magazine template with a clean, modern design suitable for everyone who wants to share their stories and the latest breaking news or the hottest products. the theme comes light and dark color mode, Newses is suitable for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals, personal blogs, newspaper, agencies, publishing or review siteand any creative website. Newses is SEO friendly, WPML, Gutenberg, WooCommerce, translation and RTL ready. We offer great support and friendly help!. Live preview : https://demos.themeansar.com/newses and documentation at https://docs.themeansar.com/docs/newses/
-Version: 2.0.0.80
+Version: 2.0.0.81
 Tested up to: 7.0
 Requires PHP: 7.4
 Requires at least: 6.7
@@ -705,10 +705,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	margin: 0 0 22px;
 }
 .alignright {
-	text-align: right;
+	text-align: end;
 }
 .alignleft {
-	text-align: left;
+	text-align: start;
 }
 .aligncenter {
 	text-align: center;
@@ -751,7 +751,7 @@ th {
     background: #f6f6f6;
     color: #01012f;
     padding: 8px 11px;
-    text-align: left;
+    text-align: start;
 }
 table, th, td {
     border: 1px solid #e9e9e9;
@@ -1465,7 +1465,7 @@ pre.wp-block-code a, #cancel-comment-reply-link, .comment-reply-link{
     list-style: none;
 }
 .comment-body .reply {
-    text-align: right;
+    text-align: end;
 }
 .comments-area .comment-meta {
     display: -ms-flexbox;
@@ -1688,7 +1688,7 @@ font-weight: 600;
 	list-style: none outside none;
 	margin-bottom: 0;
 	padding: 0;
-	text-align: left;
+	text-align: start;
 	font-size: 15px;
 	line-height: 30px;
 }
@@ -1899,7 +1899,7 @@ ol.wp-block-latest-comments {
 }
 .mg-widget .calendar_wrap table tfoot tr td#next {
 	padding: 5px;
-	text-align: right;
+	text-align: end;
 	text-transform: uppercase;
 }
 .mg-sidebar .mg-widget.widget_tag_cloud, .mg-widget.widget_tag_cloud {
@@ -2604,7 +2604,7 @@ footer .mg-widget .woocommerce ul.cart_list li img, footer .mg-widget .woocommer
 }
 .woocommerce-page .woocommerce-info {
 	float: left;
-	text-align: left;
+	text-align: start;
 	padding-top: 30px;
 }
 .woocommerce-page .woocommerce .woocommerce-info {

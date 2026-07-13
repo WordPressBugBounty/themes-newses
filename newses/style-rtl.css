@@ -4,7 +4,7 @@ Theme URI: https://themeansar.com/free-themes/newses/
 Author: Themeansar
 Author URI: https://themeansar.com
 Description: Newses is an indispensable Responsive News and Magazine template with a clean, modern design suitable for everyone who wants to share their stories and the latest breaking news or the hottest products. the theme comes light and dark color mode, Newses is suitable for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals, personal blogs, newspaper, agencies, publishing or review siteand any creative website. Newses is SEO friendly, WPML, Gutenberg, WooCommerce, translation and RTL ready. We offer great support and friendly help!. Live preview : https://demos.themeansar.com/newses and documentation at https://docs.themeansar.com/docs/newses/
-Version: 2.0.0.80
+Version: 2.0.0.81
 Tested up to: 7.0
 Requires PHP: 7.4
 Requires at least: 6.7
@@ -1035,7 +1035,7 @@ button.mfp-close:hover, button.mfp-close:focus {
     line-height: 27px;
     padding: 40px;
     font-size: 16px;
-	text-align: right;
+	text-align: end;
 }
 .mg-blog-post-box .small > p {
 	margin-bottom: 20px;
@@ -1370,7 +1370,7 @@ button.mfp-close:hover, button.mfp-close:focus {
     list-style: none;
 }
 .comment-body .reply {
-    text-align: left;
+    text-align: start;
 }
 .comments-area .comment-meta {
     display: -ms-flexbox;
@@ -1810,7 +1810,7 @@ button.mfp-close:hover, button.mfp-close:focus {
 	width: 100%;
 }
 .mg-breadcrumb-title {
-	text-align: left;
+	text-align: start;
 	padding: 0;
 }
 .mg-breadcrumb-title h1, .mg-breadcrumb-title .title {
@@ -1824,7 +1824,7 @@ button.mfp-close:hover, button.mfp-close:focus {
 	list-style: none outside none;
 	margin-bottom: 0;
 	padding: 0;
-	text-align: left;
+	text-align: start;
 	font-size: 15px;
 	line-height: 30px;
 }
@@ -1893,10 +1893,6 @@ button.mfp-close:hover, button.mfp-close:focus {
     position: relative;
     padding: 0;
     border-bottom: 2px solid rgba(120 120 120 / 20%);
-}
-.mg-sidebar .mg-widget h2 {
-	font-size: 18px;
-	line-height: 20px;
 }
 .mg-widget h6 {
     line-height: 25px;
@@ -2079,7 +2075,7 @@ ol.wp-block-latest-comments {
 }
 .mg-sidebar .mg-widget .calendar_wrap table tfoot tr td#next {
 	padding: 5px;
-	text-align: right;
+	text-align: end;
 	text-transform: uppercase;
 }
 .mg-widget .latest-posts-widget .col-md-6 {
@@ -2276,7 +2272,7 @@ footer .mg-widget .calendar_wrap table tfoot tr td#prev {
 }
 footer .mg-widget .calendar_wrap table tfoot tr td#next {
 	padding: 5px;
-	text-align: right;
+	text-align: end;
 	text-transform: uppercase;
 }
 footer .mg-widget .textwidget select {
@@ -2801,7 +2797,7 @@ footer .mg-widget .woocommerce ul.cart_list li img, footer .mg-widget .woocommer
 }
 .woocommerce-page .woocommerce-info {
 	float: right;
-	text-align: left;
+	text-align: start;
 	padding-top: 30px;
 }
 .woocommerce-page .woocommerce .woocommerce-info {
