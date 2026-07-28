@@ -4,10 +4,10 @@ Theme URI: https://themeansar.com/free-themes/newses/
 Author: Themeansar
 Author URI: https://themeansar.com
 Description: Newses is an indispensable Responsive News and Magazine template with a clean, modern design suitable for everyone who wants to share their stories and the latest breaking news or the hottest products. the theme comes light and dark color mode, Newses is suitable for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals, personal blogs, newspaper, agencies, publishing or review siteand any creative website. Newses is SEO friendly, WPML, Gutenberg, WooCommerce, translation and RTL ready. We offer great support and friendly help!. Live preview : https://demos.themeansar.com/newses and documentation at https://docs.themeansar.com/docs/newses/
-Version: 2.0.0.81
+Version: 2.0.0.82
 Tested up to: 7.0
 Requires PHP: 7.4
-Requires at least: 6.7
+Requires at least: 6.0
 Tags: one-column, two-columns ,right-sidebar, flexible-header, custom-background, custom-header, custom-menu, editor-style, featured-images, footer-widgets,  theme-options, threaded-comments, rtl-language-support, translation-ready, full-width-template, custom-logo, blog, news
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl.html
@@ -19,7 +19,8 @@ Text Domain: newses
 =========================================
 -----------------------------------------*/
 :root{
-	--headFont: 'Rubik', sans-serif
+	--headFont: 'Rubik', sans-serif;
+	--bodyFont: 'Poppins', sans-serif;
 }
 .mg-headwidget.center .logo-center, .mg-headwidget.center .navbar-header, .mg-headwidget.center .site-branding-text {
     float: none;
@@ -242,7 +243,6 @@ Text Domain: newses
 .navbar-wp .dropdown-menu > li > a {
 	padding: 12px 15px;
 	font-size: 12px;
-	font-family: 'Poppins', sans-serif;
 	display: block;
 	transition: .3s;
 	font-weight: normal;
@@ -548,7 +548,7 @@ html {
 body {
 	padding: 0;
 	margin: 0;
-	font-family: 'Poppins', sans-serif;
+	font-family: var(--bodyFont);
 	font-size: 16px;
 	-webkit-font-smoothing: antialiased;
 	font-weight: 400;
