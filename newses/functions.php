@@ -23,9 +23,16 @@
 
 	// Theme version.
 	$newses_theme = wp_get_theme();
-	define( 'NEWSES_THEME_VERSION', $newses_theme->get( 'Version' ) );
-	define ( 'NEWSES_THEME_NAME', $newses_theme->get( 'Name' ) );
-
+	
+	if ( ! defined( 'NEWSES_THEME_VERSION' ) ) {
+		define( 'NEWSES_THEME_VERSION', $newses_theme->get( 'Version' ) );
+	}
+	if ( ! defined( 'NEWSES_THEME_NAME' ) ) {
+		define( 'NEWSES_THEME_NAME', $newses_theme->get( 'Name' ) );
+	}
+	if ( ! defined( 'NEWSES_THEMEURI' ) ) {
+		define( 'NEWSES_THEMEURI', $newses_theme->get( 'ThemeURI' ) );
+	}
 	/*-----------------------------------------------------------------------------------*/
 	/*	Enqueue scripts and styles.
 	/*-----------------------------------------------------------------------------------*/

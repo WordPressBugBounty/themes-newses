@@ -70,8 +70,9 @@ if (!function_exists('newses_footer_copyright_section')) :
                             </a>
                             <span class="sep"> | </span>
                             <?php
+                            $themeName = !empty(NEWSES_THEMEURI) ? '<a href="' . esc_url( NEWSES_THEMEURI ) . '" rel="theme-name">' . esc_html( NEWSES_THEME_NAME ) . '</a>': esc_html( NEWSES_THEME_NAME );
                             /* translators: placeholder replaced with string */
-                            printf( esc_html__( 'Theme: %1$s by %2$s.', 'newses' ), 'Newses', '<a href="' . esc_url( __( 'https://themeansar.com/', 'newses' ) ) . '" rel="designer">Themeansar</a>' );
+                            printf( esc_html__( 'Theme: %1$s by %2$s.', 'newses' ), $themeName, '<a href="' . esc_url( __( 'https://themeansar.com/', 'newses' ) ) . '" rel="designer">Themeansar</a>' );
                             ?>
                         </p>
                     </div>
