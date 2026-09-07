@@ -4,7 +4,7 @@ Theme URI: https://themeansar.com/free-themes/newses/
 Author: Themeansar
 Author URI: https://themeansar.com
 Description: Newses is an indispensable Responsive News and Magazine template with a clean, modern design suitable for everyone who wants to share their stories and the latest breaking news or the hottest products. the theme comes light and dark color mode, Newses is suitable for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals, personal blogs, newspaper, agencies, publishing or review siteand any creative website. Newses is SEO friendly, WPML, Gutenberg, WooCommerce, translation and RTL ready. We offer great support and friendly help!. Live preview : https://demos.themeansar.com/newses and documentation at https://docs.themeansar.com/docs/newses/
-Version: 2.0.0.83
+Version: 2.0.0.84
 Tested up to: 7.0
 Requires PHP: 7.4
 Requires at least: 6.0
@@ -2561,7 +2561,7 @@ address i {
 	margin: 4px !important;
 	min-height: 10px;
 	padding: 0 12px;
-	z-index: 999;
+	z-index: 99;
 }
 .woocommerce span.onsale {
 	margin: 10px !important;
@@ -2587,7 +2587,7 @@ address i {
 }
 .woocommerce ul.products li.product .woocommerce-loop-product__title {
     padding: 0.5em;
-    font-size: 1.5rem;
+    font-size: 1.125rem;
 	text-align: center;
 }
 .woocommerce-page .woocommerce-ordering select {
@@ -2707,7 +2707,6 @@ footer .mg-widget .woocommerce ul.cart_list li img, footer .mg-widget .woocommer
 }
 .related.products h2 {
 	font-size: 26px;
-	line-height: 40px;
 }
 .product_meta .sku_wrapper, .product_meta .posted_in, .product_meta .tagged_as {
     display: block;
